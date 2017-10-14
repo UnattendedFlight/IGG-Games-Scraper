@@ -9,6 +9,9 @@ chromeoptions.add_argument("--headless")
 chromeoptions.add_argument('--window-size=1200x2900')
 chromeoptions.add_argument('--disable-gpu')
 chrome_path = r"modules/chromedriver/chromedriver.exe"
+if not os.path.isfile(chrome_path):
+    print("Chrome driver missing! Please download and place it in the 'modules/chromedriver' folder..")
+    exit(12)
 
 testMode = False
 
